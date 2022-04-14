@@ -3,23 +3,28 @@ import { calculatorOutline, refreshOutline } from 'ionicons/icons';
 import React from 'react';
 
 export const BmiControlls: React.FC<{
-  onCalculate: () => void;
-  onReset: () => void;
+   onCalculate: () => void;
+   onReset: () => void;
 }> = ({ onCalculate, onReset }) => {
-  return (
-    <IonRow>
-      <IonCol className='ion-text-left'>
-        <IonButton onClick={onCalculate}>
-          <IonIcon slot='start' icon={calculatorOutline} />
-          Calculate
-        </IonButton>
-      </IonCol>
-      <IonCol className='ion-text-right'>
-        <IonButton onClick={onReset}>
-          <IonIcon slot='start' icon={refreshOutline} />
-          Reset
-        </IonButton>
-      </IonCol>
-    </IonRow>
-  );
+   return (
+      <IonRow className='ion-margin-top'>
+         <IonCol size='12' size-md='6' className='ion-text-center'>
+            <IonButton
+               size='large'
+               expand='block'
+               color='tertiary'
+               onClick={onCalculate}
+            >
+               <IonIcon slot='start' icon={calculatorOutline} />
+               Calculate
+            </IonButton>
+         </IonCol>
+         <IonCol size='12' size-md='6' className='ion-text-center'>
+            <IonButton onClick={onReset} fill='clear' color='medium'>
+               <IonIcon slot='start' icon={refreshOutline} />
+               Reset
+            </IonButton>
+         </IonCol>
+      </IonRow>
+   );
 };

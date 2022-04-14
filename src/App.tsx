@@ -99,49 +99,66 @@ const App: React.FC = () => {
                   <IonTitle>BMI Calculator</IonTitle>
                </IonToolbar>
             </IonHeader>
-            <IonContent className='ion-padding'>
+            <IonContent>
                <IonGrid>
                   <IonRow>
-                     <IonCol>
-                        <InputControls
-                           selectedValue={calcUnits}
-                           onSelectValue={selectCalcUnitHandler}
-                        />
-                     </IonCol>
-                  </IonRow>
-                  <IonRow>
-                     <IonCol>
-                        <IonItem>
-                           <IonLabel position='floating'>
-                              Your Height (
-                              {calcUnits === 'mkg' ? 'meters' : 'feet'})
-                           </IonLabel>
-                           <IonInput
-                              type='number'
-                              ref={heightInputRef}
-                           ></IonInput>
-                        </IonItem>
-                     </IonCol>
-                  </IonRow>
-                  <IonRow>
-                     <IonCol>
-                        <IonItem>
-                           <IonLabel position='floating'>
-                              Your Weight ({calcUnits === 'mkg' ? 'kg' : 'lbs'})
-                           </IonLabel>
-                           <IonInput
-                              type='number'
-                              ref={weightInputRef}
-                           ></IonInput>
-                        </IonItem>
-                     </IonCol>
-                  </IonRow>
+                     <IonCol
+                        size-sm='8'
+                        offset-sm='2'
+                        size-md='6'
+                        offset-md='3'
+                        className='ion-no-padding'
+                     >
+                        <IonGrid>
+                           <IonRow>
+                              <IonCol>
+                                 <InputControls
+                                    selectedValue={calcUnits}
+                                    onSelectValue={selectCalcUnitHandler}
+                                 />
+                              </IonCol>
+                           </IonRow>
+                           <IonRow>
+                              <IonCol>
+                                 <IonItem>
+                                    <IonLabel position='floating'>
+                                       Your Height (
+                                       {calcUnits === 'mkg' ? 'meters' : 'feet'}
+                                       )
+                                    </IonLabel>
+                                    <IonInput
+                                       type='number'
+                                       ref={heightInputRef}
+                                    ></IonInput>
+                                 </IonItem>
+                              </IonCol>
+                           </IonRow>
+                           <IonRow>
+                              <IonCol>
+                                 <IonItem>
+                                    <IonLabel position='floating'>
+                                       Your Weight (
+                                       {calcUnits === 'mkg' ? 'kg' : 'lbs'})
+                                    </IonLabel>
+                                    <IonInput
+                                       type='number'
+                                       ref={weightInputRef}
+                                    ></IonInput>
+                                 </IonItem>
+                              </IonCol>
+                           </IonRow>
 
-                  <BmiControlls onCalculate={calculateBMI} onReset={resetBMI} />
+                           <BmiControlls
+                              onCalculate={calculateBMI}
+                              onReset={resetBMI}
+                           />
 
-                  {calculatedBmi && (
-                     <BmiResults calculatedBmi={calculatedBmi} />
-                  )}
+                           {calculatedBmi && (
+                              <BmiResults calculatedBmi={calculatedBmi} />
+                           )}
+                        </IonGrid>
+                     </IonCol>
+                  </IonRow>
                </IonGrid>
             </IonContent>
          </IonApp>
