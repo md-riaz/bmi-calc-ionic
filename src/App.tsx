@@ -15,6 +15,10 @@ import {
    setupIonicReact,
 } from '@ionic/react';
 
+import { BmiControlls } from './components/BmiControlls';
+import { BmiResults } from './components/BmiResults';
+import { InputControls } from './components/InputControls';
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -33,9 +37,6 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import { BmiControlls } from './components/BmiControlls';
-import { BmiResults } from './components/BmiResults';
-import { InputControls } from './components/InputControls';
 
 setupIonicReact();
 

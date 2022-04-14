@@ -1,5 +1,5 @@
 {
-	"appId": "ml.mdriaz.bmi-calc",
+	"appId": "ml.mdriaz.bmiCalc",
 	"appName": "BMI Calculator",
 	"webDir": "build",
 	"bundledWebRuntime": false
