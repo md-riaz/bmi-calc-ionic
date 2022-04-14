@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@capacitor/android": "3.4.3",
     "@capacitor/app": "1.1.1",
     "@capacitor/core": "3.4.3",
     "@capacitor/haptics": "1.1.4",
@@ -66,7 +67,8 @@
   },
   "devDependencies": {
     "@capacitor/cli": "3.4.3",
-    "@ionic/cli": "6.19.0"
+    "@ionic/cli": "6.19.0",
+    "cordova-res": "0.15.4"
   },
   "description": "An Ionic project"
 }
